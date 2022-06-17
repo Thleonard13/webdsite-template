@@ -1,1 +1,2 @@
-console.log('testing');
+const menuIcon = document.getElementById('hamburger-icon');
+

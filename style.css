@@ -1,9 +1,160 @@
+:root {
+    --purple: rgb(170, 115, 205);
+    --gray: #333;
+}
+
 html {
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
     margin: 0;
     min-height: 100vh;
-    background-color: aquamarine;
+    background-color: var(--gray);
+}
+
+/* ---- NAV BAR ---- */
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--gray);
+    color: #fff;
+}
+
+.top {
+    display: flex;
+}
+
+#main-icon {
+    display: flex;
+    align-items: center;
+    font-size: 4rem;
+    margin: 1rem;
+}
+
+.company-name {
+    color: var(--purple);
+}
+
+.nav ul {
+    min-width: 500px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: inherit;
+    padding: 1rem;
+    margin: 3px;
+    border-radius: 5px;
+}
+
+.nav a:hover {
+    /* font-size: 1.2rem; */
+    background-color: #fff;
+    color: #000;
+}
+
+#hamburger-icon {
+    display: none;
+    font-size: 3rem;
+}
+
+#hamburger-icon:active {
+    background-color: #fff;
+    .nav ul{
+        display: flex;
+    }
+}
+/* ---- BANNER ----  */
+.banner {
+    width: 100%;
+    height: 500px;
+    background-image: url("banner-img.jpeg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+}
+
+.overlay {
+    background-color: #333a;
+    position: static;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+}
+
+.text-box {
+    background-color: #333a;
+    max-width: 400px;
+    padding: 2rem;
+    border-radius: 15px;
+    color: #fff;
+}
+
+/* ---- BOTTOM SECTION */
+.card-container {
+    display: flex;
+    justify-content: center;
+    background-color: var(--purple);
+}
+
+.card {
+    position: relative;
+    bottom: 70px;
+    min-width: 250px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin: 2rem;
+    box-shadow: 7px 7px 5px #333a;
+}
+
+/* #card-1 {
+    bottom: 70px;
+}
+
+#card-2 {
+    bottom: 100px;
+}
+
+#card-3 {
+    bottom: 70px;
+} */
+
+.card:hover {
+    transform: scale(110%);
+}
+
+/* FOOTER */
+.footer {
+    color: #fff;
+    padding: 10px;
+    margin: auto 0;
+}
+
+
+/* FOR PHONE SCREENS */
+@media (max-width: 600px) {
+    .nav ul {
+        display: none;
+    }
+
+    #hamburger-icon {
+        display: block;
+        margin: 1rem;
+    }
+    .card-container {
+        flex-direction: column;
+    }
+    .card {
+        position: static;
+    }
 }
